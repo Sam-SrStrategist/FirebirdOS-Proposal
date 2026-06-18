@@ -417,7 +417,7 @@ section{transition:background 0.6s ease}
 </div>
 
 <audio id="narrationAudio" preload="auto">
-  <source src="audio/walkthrough.mp3" type="audio/mpeg">
+  <source src="walkthrough.mp3" type="audio/mpeg">
 </audio>
 
 <!-- ═══ HERO ═══ -->
@@ -879,7 +879,16 @@ section{transition:background 0.6s ease}
     document.getElementById('guidePopup').classList.remove('show');
     if(player)player.classList.add('visible');
     state.welcomed=true;sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-    track('opened',{});if(audio)audio.play().catch(()=>{});
+    track('opened',{});
+    if(audio){
+      audio.load();
+      var pr=audio.play();
+      if(pr&&pr.catch){pr.catch(function(){
+        // Autoplay blocked — show play icon so the user can tap to start
+        if(playIcon)playIcon.style.display='block';
+        if(pauseIcon)pauseIcon.style.display='none';
+      });}
+    }
     var sn=document.getElementById('sidenav');if(sn)sn.classList.add('visible');document.body.classList.add('nav-open');
   };
   window.resumeProposal=function(){
