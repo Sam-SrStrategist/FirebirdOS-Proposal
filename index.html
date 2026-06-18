@@ -85,14 +85,6 @@ body{transition:padding-left 0.55s cubic-bezier(0.16,1,0.3,1)}
 .ap-progress-bar{width:100%;height:5px;border-radius:3px;background:rgba(255,255,255,0.1);cursor:pointer;position:relative;overflow:hidden}
 .ap-progress-fill{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:3px;width:0%;transition:width 0.3s linear}
 .ap-time{display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace}
-.ap-chapter{display:flex;align-items:center;gap:10px;padding:9px 16px;cursor:pointer;transition:background 0.15s;border-left:3px solid transparent}
-.ap-chapter:hover{background:rgba(232,102,42,0.06)}
-.ap-chapter.active{background:rgba(232,102,42,0.08);border-left-color:var(--accent)}
-.ap-chapter-time{font-size:0.68rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted);min-width:42px;flex-shrink:0}
-.ap-chapter-label{font-size:0.78rem;color:var(--text-dim);font-weight:500}
-.ap-chapter.active .ap-chapter-label{color:var(--accent);font-weight:600}
-.ap-chapter-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.15);flex-shrink:0}
-.ap-chapter.active .ap-chapter-dot{background:var(--accent)}
 @media(max-width:480px){#audio-player{width:calc(100% - 32px);right:16px;bottom:16px}}
 
 .guide-popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3000;background:var(--bg-card);border:1px solid var(--border-accent);border-radius:20px;padding:40px 36px;text-align:center;max-width:460px;width:90%;box-shadow:0 40px 100px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.4s;pointer-events:none}
@@ -851,28 +843,8 @@ section{transition:background 0.6s ease}
   const currentTimeEl=document.getElementById('apCurrentTime');
   const durationEl=document.getElementById('apDuration');
 
-  const chapters=[
-    {time:0,name:'01 · The Plan In A Nutshell'},
-    {time:50,name:'02 · The Intelligent Business OS'},
-    {time:130,name:'03 · The Window Is Open'},
-    {time:185,name:'04 · Pillar 1 — Brand'},
-    {time:225,name:'05 · Pillar 2 — Website'},
-    {time:280,name:'06 · Pillar 3 — AI Advisor'},
-    {time:330,name:'07 · Pillar 4 — Online Presence'},
-    {time:360,name:'08 · Pillar 5 — Social Media'},
-    {time:400,name:'09 · Pillar 6 — Content Layer'},
-    {time:445,name:'10 · Pillar 7 — Validation'},
-    {time:490,name:'11 · Timeline'},
-    {time:540,name:'12 · Investment'},
-    {time:610,name:'13 · When You Are Ready'},
-    {time:645,name:'14 · The Close'}
-  ];
-
   function fmt(s){if(isNaN(s)||s<0)return'0:00';const m=Math.floor(s/60),c=Math.floor(s%60);return m+':'+(c<10?'0':'')+c}
-  function cur(t){let c=chapters[0];for(const ch of chapters)if(t>=ch.time)c=ch;return c}
 
-  // Map each rail section to its audio start time (matches the 8-chapter narration)
-  const sectionAudioTime={intro:0,what:55,'why-now':125,foundation:175,timeline:330,investment:380,phase2:450,close:485};
 
   window.startProposal=function(){
     document.getElementById('guideBackdrop').classList.remove('show');
@@ -978,9 +950,6 @@ section{transition:background 0.6s ease}
     link.addEventListener('click',()=>{
       const target=document.getElementById(link.dataset.target);
       if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
-      // Seek narration to this section if audio is loaded and playing
-      const t=sectionAudioTime[link.dataset.target];
-      if(audio&&typeof t==='number'&&!audio.paused){audio.currentTime=t;}
       if(window.innerWidth<=768){var sn=document.getElementById('sidenav');if(sn)sn.classList.remove('visible')}
     });
   });
