@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FirebirdOS — Foundation Proposal | Kinetic Digital Publishers</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","x8m7qu3za8");</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#E8662A;--accent-deep:#CC5420;--accent-copper:#B85A28;
+  --accent-soft:rgba(232,102,42,0.12);--green:#4CAF50;
+  --bg:#0C0A08;--bg-card:#0E0D0C;--bg-card-hover:#16120E;--bg-deep:#080604;
+  --text:#F2EDE6;--text-dim:#ABA49B;--text-muted:#5E5851;
+  --border:rgba(232,102,42,0.12);--border-light:rgba(255,255,255,0.06);--border-accent:rgba(232,102,42,0.28);
+  --glow:rgba(232,102,42,0.25);
+  --gradient:linear-gradient(135deg,#CC5420 0%,#E8662A 55%,#F47B3C 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--text);line-height:1.78;font-size:18px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent-deep);color:#fff}
+.container{max-width:920px;margin:0 auto;padding:0 28px}
+
+.topbar{position:sticky;top:0;z-index:900;background:rgba(12,10,8,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border-light)}
+.topbar-inner{max-width:1100px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:14px;letter-spacing:0.5px;text-transform:uppercase}
+.brand em{font-style:normal;color:var(--accent);margin:0 4px}
+.nav{display:flex;gap:18px;font-size:11px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase}
+.topbar{display:none}
+
+/* SIDE NAV (rail) */
+.sidenav{position:fixed;left:0;top:0;bottom:0;width:240px;z-index:850;background:rgba(10,8,6,0.82);backdrop-filter:blur(18px);border-right:1px solid var(--border-light);padding:32px 0 24px;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform 0.55s cubic-bezier(0.16,1,0.3,1);overflow-y:auto}
+.sidenav.visible{transform:translateX(0)}
+.sidenav-brand{padding:0 26px 20px;margin-bottom:8px;border-bottom:1px solid var(--border-light)}
+.sidenav-brand .sn-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1.2px;color:var(--text);line-height:1.1}
+.sidenav-brand .sn-logo em{font-style:normal;color:var(--accent)}
+.sidenav-brand .sn-sub{font-size:10px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;font-family:'JetBrains Mono',monospace;margin-top:6px}
+.sidenav-links{display:flex;flex-direction:column;padding:18px 0;position:relative}
+.sidenav-links::before{content:'';position:absolute;top:24px;bottom:24px;left:42px;width:1px;background:var(--border-light)}
+.sidenav-link{display:flex;align-items:center;gap:10px;padding:11px 26px;font-size:14px;color:var(--text-dim);cursor:pointer;transition:color 0.3s ease,background 0.3s ease;position:relative}
+.sidenav-link:hover{color:var(--text);background:rgba(232,102,42,0.04)}
+.sidenav-link.active{color:var(--accent);font-weight:600}
+.sidenav-link .sn-node{width:9px;height:9px;border-radius:50%;background:var(--bg-card);border:2px solid var(--text-muted);flex-shrink:0;z-index:1;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.sidenav-link:hover .sn-node{border-color:var(--accent)}
+.sidenav-link.active .sn-node{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px rgba(232,102,42,0.18),0 0 12px var(--glow);transform:scale(1.15)}
+.sidenav-link .sn-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);min-width:18px;transition:color 0.3s}
+.sidenav-link.active .sn-num{color:var(--accent)}
+.sidenav-toggle{position:fixed;left:16px;top:24px;z-index:851;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 6px 20px var(--glow);transition:left 0.55s cubic-bezier(0.16,1,0.3,1),background 0.25s,transform 0.25s}
+.sidenav-toggle:hover{background:var(--accent-deep);transform:scale(1.06)}
+.sidenav.visible ~ .sidenav-toggle{left:260px}
+/* Push page content clear of the rail on desktop */
+@media(min-width:1101px){
+  body.nav-open{padding-left:240px;transition:padding-left 0.55s cubic-bezier(0.16,1,0.3,1)}
+  body.nav-open #audio-player{left:calc(50% + 120px)}
+}
+body{transition:padding-left 0.55s cubic-bezier(0.16,1,0.3,1)}
+@media(max-width:1100px){.sidenav-toggle{top:auto;bottom:88px}.sidenav.visible ~ .sidenav-toggle{left:16px;bottom:88px}}
+@media(max-width:768px){.sidenav{width:78%;max-width:280px}}
+
+#audio-player{position:fixed;bottom:24px;left:50%;transform:translate(-50%,140%);z-index:9000;width:420px;max-width:calc(100vw - 48px);border-radius:16px;background:var(--bg-card);border:1px solid var(--border-accent);box-shadow:0 12px 48px rgba(0,0,0,0.5);transition:transform 0.55s cubic-bezier(0.16,1,0.3,1);overflow:hidden}
+#audio-player.visible{transform:translate(-50%,0)}
+#audio-player.minimized{width:60px;height:60px;border-radius:50%;cursor:pointer;overflow:hidden}
+#audio-player.minimized .ap-full{opacity:0;pointer-events:none;height:0}
+#audio-player.minimized .ap-mini{display:flex}
+.ap-mini{display:none;width:60px;height:60px;align-items:center;justify-content:center;background:var(--accent);color:var(--bg);font-size:1.2rem;font-weight:700;overflow:hidden}
+.ap-mini img{width:100%;height:100%;object-fit:cover}
+.ap-header{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border-light)}
+.ap-icon{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;font-weight:700;overflow:hidden}
+.ap-icon img{width:100%;height:100%;object-fit:cover}
+.ap-title{flex:1;min-width:0}
+.ap-title h4{font-size:0.82rem;font-weight:600;color:var(--text);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ap-title p{font-size:0.7rem;color:var(--text-muted);margin:0}
+.ap-minimize{width:28px;height:28px;border-radius:6px;background:transparent;border:1px solid var(--border-light);color:var(--text-muted);font-size:0.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}
+.ap-minimize:hover{background:rgba(255,255,255,0.05);color:var(--text)}
+.ap-controls{padding:12px 16px;display:flex;align-items:center;gap:12px}
+.ap-play-btn{width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--bg);border:none;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.ap-play-btn:hover{background:var(--accent-deep);transform:scale(1.05)}
+.ap-play-btn svg{width:16px;height:16px;fill:currentColor}
+.ap-progress-wrap{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0}
+.ap-progress-bar{width:100%;height:5px;border-radius:3px;background:rgba(255,255,255,0.1);cursor:pointer;position:relative;overflow:hidden}
+.ap-progress-fill{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:3px;width:0%;transition:width 0.3s linear}
+.ap-time{display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace}
+.ap-chapter{display:flex;align-items:center;gap:10px;padding:9px 16px;cursor:pointer;transition:background 0.15s;border-left:3px solid transparent}
+.ap-chapter:hover{background:rgba(232,102,42,0.06)}
+.ap-chapter.active{background:rgba(232,102,42,0.08);border-left-color:var(--accent)}
+.ap-chapter-time{font-size:0.68rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted);min-width:42px;flex-shrink:0}
+.ap-chapter-label{font-size:0.78rem;color:var(--text-dim);font-weight:500}
+.ap-chapter.active .ap-chapter-label{color:var(--accent);font-weight:600}
+.ap-chapter-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.15);flex-shrink:0}
+.ap-chapter.active .ap-chapter-dot{background:var(--accent)}
+@media(max-width:480px){#audio-player{width:calc(100% - 32px);right:16px;bottom:16px}}
+
+.guide-popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3000;background:var(--bg-card);border:1px solid var(--border-accent);border-radius:20px;padding:40px 36px;text-align:center;max-width:460px;width:90%;box-shadow:0 40px 100px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.4s;pointer-events:none}
+.guide-popup.show{opacity:1;pointer-events:auto}
+.guide-popup h3{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1.5px;margin-bottom:12px;color:var(--accent)}
+.guide-popup .sub{font-size:11px;color:var(--text-muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.guide-popup p{font-size:15px;color:var(--text-dim);margin-bottom:24px;line-height:1.7}
+.guide-popup .btns{display:flex;flex-direction:column;gap:10px}
+.guide-popup button{border:none;padding:14px 32px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:all 0.2s}
+.guide-popup .btn-primary{background:var(--gradient);color:#fff;letter-spacing:0.5px}
+.guide-popup .btn-resume{background:transparent;color:var(--accent);border:1px solid var(--accent);display:none}
+.guide-popup .btn-skip{background:transparent;color:var(--text-muted);font-weight:500;border:1px solid var(--border-light);font-size:13px}
+.guide-popup button:hover{transform:translateY(-1px)}
+.guide-backdrop{position:fixed;inset:0;z-index:2999;background:rgba(0,0,0,0.85);opacity:0;transition:opacity 0.4s;pointer-events:none;backdrop-filter:blur(8px)}
+
+/* ACCESS GATE */
+.gate{position:fixed;inset:0;z-index:5000;background:rgba(8,6,4,0.97);display:flex;align-items:center;justify-content:center;padding:24px;overflow-y:auto;backdrop-filter:blur(10px);transition:opacity 0.5s ease}
+.gate.hidden{opacity:0;pointer-events:none}
+.gatebox{width:100%;max-width:480px;border:1px solid var(--border-light);border-top:3px solid var(--accent);background:var(--bg-card);border-radius:14px;padding:42px 38px 34px;box-shadow:0 40px 100px rgba(0,0,0,0.7);animation:gateIn 0.7s cubic-bezier(0.16,1,0.3,1) both}
+@keyframes gateIn{from{opacity:0;transform:translateY(24px) scale(0.98)}to{opacity:1;transform:none}}
+.gatebox .gate-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.gatebox .gate-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite}
+.gatebox h2{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:1px;color:var(--text);margin-bottom:12px;line-height:1.05}
+.gatebox h2 em{font-style:normal;color:var(--accent)}
+.gatebox .gate-intro{font-size:15px;color:var(--text-dim);line-height:1.6;margin-bottom:8px}
+.gatebox label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);display:block;margin:18px 0 6px}
+.gatebox input[type=text],.gatebox input[type=email],.gatebox input[type=tel]{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--border-light);border-radius:8px;color:var(--text);font-family:'Source Sans 3',sans-serif;font-size:15px;transition:border 0.2s}
+.gatebox input:focus{outline:none;border-color:var(--accent)}
+.gatebox input::placeholder{color:var(--text-muted)}
+.gatebox .gate-check{display:flex;gap:10px;align-items:flex-start;margin:18px 0 6px;font-size:13px;color:var(--text-muted);line-height:1.5}
+.gatebox .gate-check input{margin-top:3px;accent-color:var(--accent);flex-shrink:0}
+.gatebox .gate-btn{width:100%;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;background:var(--gradient);color:#fff;border:none;border-radius:8px;padding:15px 22px;margin-top:20px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden}
+.gatebox .gate-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px var(--glow)}
+.gatebox .gate-btn::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,0.25),transparent);transform:skewX(-20deg);transition:left 0.7s ease}
+.gatebox .gate-btn:hover::after{left:140%}
+.gatebox .gate-priv{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);text-align:center;margin-top:14px}
+.guide-backdrop.show{opacity:1;pointer-events:auto}
+
+.hero{position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 30%,rgba(232,102,42,0.12) 0%,transparent 50%),radial-gradient(ellipse at 80% 70%,rgba(232,102,42,0.08) 0%,transparent 50%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,transparent 30%,transparent 70%,var(--bg) 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(232,102,42,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(232,102,42,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 40%,transparent 80%)}
+.hero-inner{position:relative;z-index:2;padding:120px 0 100px;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;background:var(--accent-soft);border:1px solid var(--border-accent);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:32px;font-family:'JetBrains Mono',monospace}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,92px);line-height:0.94;letter-spacing:1px;margin-bottom:32px}
+.hero h1 em{font-style:normal;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:21px;color:var(--text-dim);max-width:680px;line-height:1.55;margin-bottom:48px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid var(--border-light)}
+.hero-meta-item{display:flex;flex-direction:column;gap:6px}
+.hero-meta-item .label{font-size:10px;color:var(--text-muted);letter-spacing:2px;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.hero-meta-item .value{font-size:15px;color:var(--text);font-weight:600}
+.hero-meta-item .value em{font-style:normal;color:var(--accent)}
+
+section{padding:80px 0;position:relative}
+.section-label{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.section-label::before{content:'';width:24px;height:1px;background:var(--accent)}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,58px);line-height:1.0;letter-spacing:1.5px;margin-bottom:20px}
+.section-title em{font-style:normal;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-lead{font-size:20px;color:var(--text-dim);line-height:1.65;margin-bottom:36px;max-width:760px}
+.section-body p{font-size:18px;color:var(--text-dim);line-height:1.8;margin-bottom:18px}
+.section-body p strong{color:var(--text);font-weight:600}
+.section-body p em{font-style:normal;color:var(--accent);font-weight:500}
+.section-body h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1.2px;color:var(--text);margin:32px 0 14px}
+
+.divider-spacer{padding:40px 0;display:flex;align-items:center;justify-content:center;position:relative}
+.divider-spacer::before{content:'';position:absolute;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(232,102,42,0.25) 20%,rgba(232,102,42,0.35) 50%,rgba(232,102,42,0.25) 80%,transparent 100%)}
+.divider-spacer::after{content:'';position:relative;z-index:1;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--glow),0 0 24px rgba(232,102,42,0.15)}
+
+.letter{background:var(--bg-card);border:1px solid var(--border-light);border-left:3px solid var(--accent);border-radius:16px;padding:44px 40px;margin:36px 0;position:relative}
+.letter p{font-size:18px;line-height:1.85;color:var(--text-dim);margin-bottom:16px}
+.letter p strong{color:var(--text)}
+.letter p em{font-style:normal;color:var(--accent);font-weight:500}
+.letter .signature{margin-top:28px;padding-top:20px;border-top:1px solid var(--border-light)}
+.letter .signature .name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1.5px;color:var(--text);margin-bottom:4px}
+.letter .signature .role{font-size:13px;color:var(--text-muted)}
+
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+@media(max-width:768px){.stat-grid{grid-template-columns:1fr}}
+.stat-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:14px;padding:24px 20px;transition:all 0.3s}
+.stat-card:hover{border-color:var(--border-accent);transform:translateY(-3px);background:var(--bg-card-hover)}
+.stat-card .num{font-family:'Bebas Neue',sans-serif;font-size:44px;line-height:1;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.stat-card .lbl{font-size:14px;color:var(--text-dim);line-height:1.45}
+.stat-card .lbl strong{color:var(--text)}
+.stat-card .src{font-size:10px;color:var(--text-muted);margin-top:8px;font-family:'JetBrains Mono',monospace}
+.stat-card .src a{color:var(--accent);text-decoration:underline}
+
+.callout{background:var(--bg-card);border:1px solid var(--border-light);border-radius:16px;padding:32px 36px;margin:28px 0;position:relative;overflow:hidden}
+.callout::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient)}
+
+.pillar{background:var(--bg-card);border:1px solid var(--border-light);border-radius:16px;padding:32px 30px;margin:18px 0;position:relative;overflow:hidden;transition:all 0.3s}
+.pillar:hover{border-color:var(--border-accent);background:var(--bg-card-hover)}
+.pillar::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--gradient)}
+.pillar .pillar-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.pillar h4{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1.2px;color:var(--text);margin-bottom:10px}
+.pillar p{font-size:16px;color:var(--text-dim);line-height:1.7;margin-bottom:10px}
+.pillar p strong{color:var(--text)}
+.pillar p em{font-style:normal;color:var(--accent)}
+.pillar ul{list-style:none;padding:0;margin:10px 0 0}
+.pillar ul li{padding:6px 0 6px 22px;position:relative;font-size:15px;color:var(--text-dim);line-height:1.55}
+.pillar ul li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
+.pillar ul li strong{color:var(--text)}
+
+.advisor-live{background:linear-gradient(180deg,var(--bg-card) 0%,var(--bg-deep) 100%);border:1px solid var(--border-accent);border-radius:20px;padding:0;margin:28px 0;max-width:720px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,0.4)}
+.advisor-live-head{padding:20px 24px;border-bottom:1px solid var(--border-light);background:rgba(232,102,42,0.04);display:flex;align-items:center;gap:14px}
+.advisor-live-head .av{width:40px;height:40px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;flex-shrink:0}
+.advisor-live-head h5{font-size:15px;font-weight:700;color:var(--text);margin:0}
+.advisor-live-head p{font-size:12px;color:var(--green);margin:0;display:flex;align-items:center;gap:6px}
+.advisor-live-head p::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite}
+.advisor-niche-selector{padding:14px 20px;border-bottom:1px solid var(--border-light);background:rgba(232,102,42,0.03)}
+.advisor-niche-selector .niche-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.advisor-niche-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.advisor-niche-tab{padding:7px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-light);border-radius:8px;font-size:12px;color:var(--text-dim);cursor:pointer;transition:all 0.2s;font-weight:500}
+.advisor-niche-tab:hover{border-color:var(--accent);color:var(--accent)}
+.advisor-niche-tab.active{background:rgba(232,102,42,0.1);border-color:var(--accent);color:var(--accent);font-weight:600}
+.advisor-live-body{height:340px;overflow-y:auto;padding:20px 24px;scroll-behavior:smooth}
+.advisor-msg{margin-bottom:12px;max-width:88%;animation:slideIn 0.4s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.advisor-msg.user{margin-left:auto}
+.advisor-msg-bubble{padding:12px 16px;border-radius:14px;font-size:14px;line-height:1.6}
+.advisor-msg.user .advisor-msg-bubble{background:rgba(232,102,42,0.15);border:1px solid rgba(232,102,42,0.3);color:var(--text)}
+.advisor-msg.bot .advisor-msg-bubble{background:rgba(255,255,255,0.04);border:1px solid var(--border-light);color:var(--text-dim)}
+.advisor-msg.bot .advisor-msg-bubble strong{color:var(--text)}
+.advisor-typing{display:inline-flex;gap:4px;padding:12px 16px;background:rgba(255,255,255,0.04);border:1px solid var(--border-light);border-radius:14px}
+.advisor-typing span{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:bounce 1.4s infinite}
+.advisor-typing span:nth-child(2){animation-delay:0.2s}
+.advisor-typing span:nth-child(3){animation-delay:0.4s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:0.4}30%{transform:translateY(-6px);opacity:1}}
+.advisor-suggestions{padding:12px 20px;border-top:1px solid var(--border-light);display:flex;flex-wrap:wrap;gap:6px;background:rgba(255,255,255,0.02)}
+.advisor-suggestion{padding:6px 12px;background:rgba(232,102,42,0.06);border:1px solid var(--border-accent);border-radius:999px;font-size:12px;color:var(--accent);cursor:pointer;transition:all 0.2s}
+.advisor-suggestion:hover{background:var(--accent);color:var(--bg)}
+.advisor-input-wrap{display:flex;gap:10px;padding:14px 20px;border-top:1px solid var(--border-light);background:rgba(0,0,0,0.2)}
+.advisor-input{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border-light);border-radius:10px;padding:11px 14px;font-size:14px;color:var(--text);font-family:'Source Sans 3',sans-serif;outline:none;transition:border 0.2s}
+.advisor-input:focus{border-color:var(--accent)}
+.advisor-input::placeholder{color:var(--text-muted)}
+.advisor-send{background:var(--gradient);color:#fff;border:none;padding:0 20px;border-radius:10px;font-weight:700;cursor:pointer;font-size:13px;transition:transform 0.15s}
+.advisor-send:hover{transform:translateY(-1px)}
+
+.timeline{position:relative;padding-left:38px;margin:28px 0}
+.timeline::before{content:'';position:absolute;left:13px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--accent) 0%,var(--accent-copper) 100%);opacity:0.35}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item::before{content:'';position:absolute;left:-31px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg);box-shadow:0 0 16px var(--glow)}
+.tl-week{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.tl-item h5{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1.2px;color:var(--text);margin-bottom:6px;line-height:1.15}
+.tl-item p{font-size:15px;color:var(--text-dim);line-height:1.6;margin:0}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:28px 0;max-width:760px}
+@media(max-width:768px){.pricing-grid{grid-template-columns:1fr}}
+.price-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:16px;padding:34px 30px;position:relative;overflow:hidden;transition:all 0.3s}
+.price-card:hover{border-color:var(--border-accent);transform:translateY(-3px);background:var(--bg-card-hover)}
+.price-card.featured{border-color:var(--accent);box-shadow:0 16px 48px var(--glow)}
+.price-card.featured::after{content:'SAVE $3,000';position:absolute;top:18px;right:-34px;transform:rotate(35deg);background:var(--gradient);color:#fff;padding:4px 44px;font-size:9px;font-weight:700;letter-spacing:1.5px;font-family:'JetBrains Mono',monospace}
+.price-card .tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.price-card h4{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1.2px;color:var(--text);margin-bottom:14px;line-height:1.1}
+.price-card .amt{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:var(--text);margin-bottom:4px}
+.price-card .per{font-size:14px;color:var(--text-muted);margin-bottom:18px}
+.price-card ul{list-style:none;padding:0;margin:0}
+.price-card ul li{padding:7px 0 7px 20px;position:relative;font-size:14px;color:var(--text-dim);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+.price-card ul li:last-child{border-bottom:none}
+.price-card ul li::before{content:'→';position:absolute;left:0;color:var(--accent);font-weight:600}
+.price-card ul li strong{color:var(--text)}
+
+.deliv-list{list-style:none;padding:0;margin:16px 0}
+.deliv-list li{padding:10px 0 10px 24px;position:relative;font-size:16px;line-height:1.6;color:var(--text);border-bottom:1px solid rgba(255,255,255,0.04)}
+.deliv-list li:last-child{border-bottom:none}
+.deliv-list li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
+.deliv-list li strong{color:var(--text)}
+
+.itemized{width:100%;border-collapse:collapse;margin:18px 0;background:var(--bg-card);border:1px solid var(--border-light);border-radius:14px;overflow:hidden;font-size:15px}
+.itemized th{background:rgba(232,102,42,0.06);color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:12px 16px;text-align:left;border-bottom:1px solid var(--border-accent);font-weight:700}
+.itemized td{padding:12px 16px;border-bottom:1px solid var(--border-light);color:var(--text-dim)}
+.itemized tr:last-child td{border-bottom:none}
+.itemized td:last-child{text-align:right;font-family:'JetBrains Mono',monospace;color:var(--text)}
+.itemized .total-row td{background:rgba(232,102,42,0.05);color:var(--text);font-weight:700;border-top:2px solid var(--accent)}
+
+#proposal-form{background:var(--bg-card);border:1px solid var(--border);padding:32px;border-radius:12px;margin:28px 0}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+.form-row input,.form-row select,.form-row textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:12px 14px;border-radius:6px;font-size:15px;font-family:'Source Sans 3',sans-serif;box-sizing:border-box}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:var(--accent)}
+.form-row textarea{resize:vertical;min-height:80px}
+.form-submit{background:var(--accent);color:var(--bg);border:none;padding:14px 28px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-radius:6px;cursor:pointer;font-weight:700;width:100%;transition:all 0.2s}
+.form-submit:hover{background:var(--accent-deep);transform:translateY(-1px)}
+
+.cta-sig{margin-top:16px;font-size:16px;color:var(--text)}
+.cta-sig .muted{font-size:13px;color:var(--text-muted);font-style:italic}
+
+footer{padding:40px 0 28px;border-top:1px solid var(--border);margin-top:48px;background:var(--bg-card)}
+footer p{font-size:13px;color:var(--text-muted);text-align:center;margin-bottom:6px;line-height:1.6}
+footer p strong{color:var(--text);letter-spacing:1px;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1)}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+
+/* Scroll progress bar */
+#scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--gradient);z-index:9500;transition:width 0.1s linear;box-shadow:0 0 10px var(--glow)}
+
+/* Hero entrance */
+@keyframes heroFade{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-tag{animation:heroFade 0.9s cubic-bezier(0.16,1,0.3,1) both}
+.hero h1{animation:heroFade 1s cubic-bezier(0.16,1,0.3,1) 0.12s both}
+.hero-sub{animation:heroFade 1s cubic-bezier(0.16,1,0.3,1) 0.24s both}
+.hero-meta{animation:heroFade 1s cubic-bezier(0.16,1,0.3,1) 0.36s both}
+
+/* Card hover polish */
+.stat-card,.pillar,.price-card,.callout{transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),border-color 0.4s ease,box-shadow 0.4s ease,background 0.5s ease}
+/* Section currently in view / being narrated gets a subtle warm lift on its cards */
+section.section-active .pillar,section.section-active .stat-card,section.section-active .callout,section.section-active .price-card,section.section-active .letter{background:var(--bg-card-hover)}
+section{transition:background 0.6s ease}
+
+/* Button shimmer */
+.guide-popup .btn-primary,.form-submit{position:relative;overflow:hidden}
+.guide-popup .btn-primary::after,.form-submit::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,0.25),transparent);transform:skewX(-20deg);transition:left 0.7s ease}
+.guide-popup .btn-primary:hover::after,.form-submit:hover::after{left:140%}
+
+/* Section label underline draw */
+.section-label::before{transition:width 0.6s cubic-bezier(0.16,1,0.3,1)}
+.reveal .section-label::before{width:0}
+.reveal.revealed .section-label::before{width:24px}
+
+/* Divider pulse */
+.divider-spacer::after{animation:dividerPulse 3s ease-in-out infinite}
+@keyframes dividerPulse{0%,100%{box-shadow:0 0 12px var(--glow),0 0 24px rgba(232,102,42,0.15)}50%{box-shadow:0 0 18px var(--glow),0 0 36px rgba(232,102,42,0.25)}}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal,.hero-tag,.hero h1,.hero-sub,.hero-meta{animation:none!important;transition:opacity 0.3s ease!important;opacity:1!important;transform:none!important}
+  .divider-spacer::after{animation:none}
+}
+
+@media(max-width:640px){
+  section{padding:50px 0}
+  .container{padding:0 20px}
+  .hero-inner{padding:80px 0 60px}
+  .letter,.callout{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+<div id="scroll-progress"></div>
+
+<!-- ACCESS GATE -->
+<div class="gate" id="gate">
+  <div class="gatebox">
+    <div class="gate-eyebrow">Confidential · Foundation Proposal</div>
+    <h2>Prepared For <em>Tom Batchelor</em></h2>
+    <p class="gate-intro">This proposal was built around FirebirdOS and where you're taking it. Add your details below to open it.</p>
+    <form id="gateForm">
+      <label for="g_name">Your Name</label>
+      <input type="text" id="g_name" name="name" placeholder="Tom Batchelor" required>
+      <label for="g_email">Email Address</label>
+      <input type="email" id="g_email" name="email" placeholder="tom@firebirdtradingsystems.com" required>
+      <label for="g_phone">Phone Number</label>
+      <input type="tel" id="g_phone" name="phone" placeholder="+1 (555) 000 0000" required>
+      <div class="gate-check">
+        <input type="checkbox" id="g_ack" required>
+        <span>This proposal was prepared just for FirebirdOS. I agree not to share it without approval from Kinetic Digital Publishers.</span>
+      </div>
+      <button class="gate-btn" type="submit">Open The Proposal →</button>
+      <div class="gate-priv">Your information stays private. It is never shared.</div>
+    </form>
+  </div>
+</div>
+
+<!-- SIDE NAV (rail) -->
+<nav class="sidenav" id="sidenav">
+  <div class="sidenav-brand">
+    <div class="sn-logo">Kinetic <em>×</em> Firebird<em>OS</em></div>
+    <div class="sn-sub">Foundation Proposal</div>
+  </div>
+  <div class="sidenav-links" id="sidenavLinks">
+    <div class="sidenav-link active" data-target="intro"><span class="sn-node"></span><span class="sn-num">01</span> Introduction</div>
+    <div class="sidenav-link" data-target="what"><span class="sn-node"></span><span class="sn-num">02</span> The System</div>
+    <div class="sidenav-link" data-target="why-now"><span class="sn-node"></span><span class="sn-num">03</span> Why Now</div>
+    <div class="sidenav-link" data-target="foundation"><span class="sn-node"></span><span class="sn-num">04</span> The Foundation</div>
+    <div class="sidenav-link" data-target="timeline"><span class="sn-node"></span><span class="sn-num">05</span> Timeline</div>
+    <div class="sidenav-link" data-target="investment"><span class="sn-node"></span><span class="sn-num">06</span> Investment</div>
+    <div class="sidenav-link" data-target="phase2"><span class="sn-node"></span><span class="sn-num">07</span> What's Next</div>
+    <div class="sidenav-link" data-target="close"><span class="sn-node"></span><span class="sn-num">08</span> Let's Build</div>
+  </div>
+</nav>
+<button class="sidenav-toggle" id="sidenavToggle" onclick="toggleSidenav()" title="Sections">☰</button>
+
+<!-- WELCOME -->
+<div class="guide-backdrop" id="guideBackdrop"></div>
+<div class="guide-popup" id="guidePopup">
+  <div class="sub">Foundation Phase Proposal</div>
+  <h3>WELCOME, TOM</h3>
+  <p>This proposal covers one thing: building the complete launchpad for FirebirdOS while you finish building the system itself. Audio narration walks you through each section.</p>
+  <div class="btns">
+    <button class="btn-primary" onclick="startProposal()">▶ Begin Walkthrough</button>
+    <button class="btn-resume" id="btnResume" onclick="resumeProposal()">↻ Resume Where You Left Off</button>
+  </div>
+</div>
+
+<!-- AUDIO PLAYER -->
+<div id="audio-player">
+  <div class="ap-mini" onclick="toggleMinimize()"><img src="data:image/png;base64,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" alt="Sam"></div>
+  <div class="ap-full">
+    <div class="ap-header">
+      <div class="ap-icon"><img src="data:image/png;base64,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" alt="Sam"></div>
+      <div class="ap-title">
+        <h4>FirebirdOS Foundation Walkthrough</h4>
+        <p>Narrated by Sam · Kinetic Digital Publishers</p>
+      </div>
+      <button class="ap-minimize" onclick="toggleMinimize()" title="Minimize">−</button>
+    </div>
+    <div class="ap-controls">
+      <button class="ap-play-btn" onclick="togglePlay()">
+        <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+      <div class="ap-progress-wrap">
+        <div class="ap-progress-bar" id="apProgressBar" onclick="seekAudio(event)">
+          <div class="ap-progress-fill" id="apProgressFill"></div>
+        </div>
+        <div class="ap-time"><span id="apCurrentTime">0:00</span><span id="apDuration">0:00</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="narrationAudio" preload="auto">
+  <source src="audio/walkthrough.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><div class="hero-grid"></div></div>
+  <div class="hero-inner">
+    <div class="container">
+      <div class="hero-tag"><span class="dot"></span> Confidential · Prepared for Tom Batchelor</div>
+      <h1>You Build The System.<br>We Build The<br><em>Launchpad.</em></h1>
+      <p class="hero-sub">The FirebirdOS Foundation Phase — brand, website, AI advisor, social presence, content, and validation partners. All ready the day your product is.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="label">Prepared By</span><span class="value">Sam, <em>Sr. Strategist</em></span></div>
+        <div class="hero-meta-item"><span class="label">Agency</span><span class="value">Kinetic Digital Publishers</span></div>
+        <div class="hero-meta-item"><span class="label">Engagement</span><span class="value">Foundation Phase Only</span></div>
+        <div class="hero-meta-item"><span class="label">Duration</span><span class="value">10–12 Weeks</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 1. INTRO ═══ -->
+<section id="intro">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">01 · Introduction</div>
+      <h2 class="section-title">The Plan, <em>In A Nutshell</em></h2>
+    </div>
+    <div class="letter reveal">
+      <p>Tom — this proposal lays out one focused phase: <strong>building the complete launchpad for FirebirdOS while you finish building the system.</strong></p>
+      <p>You're deep in product, and that's exactly where you should be. But there's a layer of work that takes 10 to 12 weeks no matter when it starts — the brand, the website, the AI advisor, your online presence, social, content, and a group of validation partners. Build it now, in parallel, and the day you say "we're ready," the market is already waiting.</p>
+      <p>Over the next few sections you'll see exactly what gets built, the week-by-week timeline, one clear price, and a working preview of the AI advisor you can try yourself.</p>
+      <p>Take your time with it. Bring every question to our call. By the end you'll know precisely what you're getting and why now is the right moment to start.</p>
+      <div class="signature">
+        <div class="name">SAM — Sr. Strategist</div>
+        <div class="role">Kinetic Digital Publishers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 2. WHAT FIREBIRDOS IS ═══ -->
+<section id="what">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">02 · The System</div>
+      <h2 class="section-title">The Intelligent Business <em>Operating System</em></h2>
+      <p class="section-lead">Your words, your framing — because they're right. This is the positioning everything we build will carry.</p>
+    </div>
+
+    <div class="section-body reveal">
+      <p><strong>The Fragmentation Trap.</strong> Most businesses run on 10–20 disconnected tools. CRM here, email there, support somewhere else. Data sits in silos. Every tool stores information — none of them act on it.</p>
+      <p><strong>FirebirdOS is the unified intelligence layer.</strong> At its core sits the Canonical Business Record — one continuously updated record of customers, marketing, operations, and revenue. Every module works from this shared brain.</p>
+      <p>On top of it: four intelligence layers. <em>Operational Intelligence</em> captures and orchestrates. <em>Growth Intelligence</em> runs autonomous social media and marketing. <em>Strategic Intelligence</em> predicts — which customers will leave, which channels make money. <em>Autonomous Execution</em> acts without waiting for a human.</p>
+      <p>And the modular ecosystem around the core — Media, Connect, Publish, Studio, Strategy, Talent, Mentor, Research — means a business starts small and grows into the system.</p>
+    </div>
+
+    <div class="callout reveal">
+      <div class="section-body">
+        <p style="margin-bottom:0"><strong>This isn't another workflow tool.</strong> Zapier connects. HubSpot stores. FirebirdOS <em>decides and acts</em>. That's a new category — and new categories are won by whoever shows up first with a credible presence. That's what the Foundation is for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 3. WHY NOW ═══ -->
+<section id="why-now">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">03 · Why Now</div>
+      <h2 class="section-title">The Window Is <em>Open</em></h2>
+      <p class="section-lead">Three numbers — all from public sources, all pointing the same direction.</p>
+    </div>
+
+    <div class="stat-grid reveal">
+      <div class="stat-card">
+        <div class="num">33%</div>
+        <div class="lbl">Of enterprise apps will include agentic AI by 2028. <strong>Buyers are choosing platforms now.</strong></div>
+        <div class="src"><a href="https://www.gartner.com/en/newsroom/press-releases" target="_blank">Gartner</a></div>
+      </div>
+      <div class="stat-card">
+        <div class="num">$540M</div>
+        <div class="lbl">Salesforce Agentforce revenue in its first 12 months. <strong>Demand is proven.</strong></div>
+        <div class="src"><a href="https://investor.salesforce.com/news/" target="_blank">Salesforce IR</a></div>
+      </div>
+      <div class="stat-card">
+        <div class="num">230K</div>
+        <div class="lbl">Organizations building AI agents on Copilot Studio. <strong>The market is educating itself.</strong></div>
+        <div class="src"><a href="https://blog.applabx.com/the-state-of-microsoft-copilot-in-2025-a-comprehensive-analysis/" target="_blank">Microsoft</a></div>
+      </div>
+    </div>
+
+    <div class="section-body reveal">
+      <p>The competitors in your assessment — HubSpot, Notion AI, Glean, Moveworks — are all racing toward intelligent operations. None of them started from your position: <strong>a working system built around a canonical business record with autonomous execution.</strong></p>
+      <p>But position only matters if the market can see you. Right now, someone who hears about FirebirdOS and Googles it finds almost nothing. <em>That's the gap the Foundation closes.</em></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 4. THE FOUNDATION ═══ -->
+<section id="foundation">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">04 · The Foundation Phase</div>
+      <h2 class="section-title">Seven Pillars, <em>One Launchpad</em></h2>
+      <p class="section-lead">Everything FirebirdOS needs to exist credibly in the market — built in parallel with your product work, integrated with the system you're building.</p>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 01</div>
+      <h4>Brand & Identity</h4>
+      <p>The visual system everything else sits on. We work with the blueprint aesthetic of your deck — it's distinctive and it fits the engineering story.</p>
+      <ul>
+        <li><strong>Logo refinement</strong> and full identity system</li>
+        <li>Color, typography, and usage guidelines</li>
+        <li>Templates for decks, one-pagers, and partner collateral</li>
+        <li>Naming support — FirebirdOS / SoarOS / AscendraOS decision framework, trademark-availability scan, and final wordmark</li>
+      </ul>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 02</div>
+      <h4>Website — Built To Integrate</h4>
+      <p>Not a brochure. A site designed from day one to plug into FirebirdOS itself.</p>
+      <ul>
+        <li><strong>10–12 pages:</strong> home, platform, modules, use cases, about, contact, demo request</li>
+        <li><strong>Your forms architecture implemented</strong> — registration, contact, and newsletter forms feeding directly into BOS input, exactly per your documentation</li>
+        <li><strong>Endpoint ready for the Complex Option Positions tool</strong> — we plan the website endpoint into the build so your tool connects the week it's ready</li>
+        <li>iNewsletter Module integration for subscriber capture</li>
+        <li>SEO foundation, GA4 + Clarity analytics, fast and clean</li>
+        <li><strong>Live in the first 30 days</strong></li>
+      </ul>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 03</div>
+      <h4>AI Advisor — Try It Below</h4>
+      <p>A trained assistant on the website that explains FirebirdOS, answers questions, and captures qualified interest — working for you 24/7 while you build. Here's a working preview. Pick a visitor type and watch it adapt:</p>
+    </div>
+
+    <div class="advisor-live reveal" id="advisorLive">
+      <div class="advisor-live-head">
+        <div class="av">F</div>
+        <div>
+          <h5>FirebirdOS Advisor</h5>
+          <p>Live · Adapts to visitor type</p>
+        </div>
+      </div>
+      <div class="advisor-niche-selector">
+        <div class="niche-label">I'm visiting as a...</div>
+        <div class="advisor-niche-tabs" id="nicheTabs">
+          <div class="advisor-niche-tab active" data-niche="smb" onclick="switchNiche('smb')">🏢 Small Business Owner</div>
+          <div class="advisor-niche-tab" data-niche="startup" onclick="switchNiche('startup')">🚀 Startup Founder</div>
+          <div class="advisor-niche-tab" data-niche="partner" onclick="switchNiche('partner')">🤝 Potential Partner</div>
+          <div class="advisor-niche-tab" data-niche="investor" onclick="switchNiche('investor')">📈 Investor</div>
+        </div>
+      </div>
+      <div class="advisor-live-body" id="advisorBody">
+        <div class="advisor-msg bot">
+          <div class="advisor-msg-bubble">👋 Welcome — I'm the FirebirdOS Advisor. I see you run a <strong>small business</strong>. Most owners come to us juggling 10+ disconnected tools and drowning in admin work. What eats most of your week — marketing, operations, or keeping track of customers?</div>
+        </div>
+      </div>
+      <div class="advisor-suggestions" id="advisorSuggestions">
+        <div class="advisor-suggestion" onclick="askAdvisor('What does FirebirdOS actually do?')">What does FirebirdOS actually do?</div>
+        <div class="advisor-suggestion" onclick="askAdvisor('Can it run my social media?')">Can it run my social media?</div>
+        <div class="advisor-suggestion" onclick="askAdvisor('What does it cost?')">What does it cost?</div>
+      </div>
+      <div class="advisor-input-wrap">
+        <input type="text" class="advisor-input" id="advisorInput" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sendAdvisorMsg()">
+        <button class="advisor-send" onclick="sendAdvisorMsg()">Send →</button>
+      </div>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 04</div>
+      <h4>Online Presence & Reputation</h4>
+      <p>When someone hears about FirebirdOS and searches for it, they need to find a real company with real credibility. This is a service line we already run for clients every day — profiles, reviews, and reputation are core Kinetic work.</p>
+      <ul>
+        <li><strong>Business profile creation</strong> — G2, Capterra, Product Hunt, LinkedIn company page, Crunchbase, Google Business Profile</li>
+        <li><strong>Reviews management system</strong> — collection workflows so validation partners and early users leave reviews where they count</li>
+        <li><strong>Online reputation foundation</strong> — consistent naming, descriptions, and visuals across every platform</li>
+        <li>Search presence basics so "FirebirdOS" returns a credible first page</li>
+      </ul>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 05</div>
+      <h4>Social Media — Set Up & Optimized</h4>
+      <p>Fitting, since autonomous social growth is one of FirebirdOS's own flagship capabilities. The accounts we set up become the system's first proving ground.</p>
+      <ul>
+        <li>LinkedIn, X, Facebook, Instagram, and YouTube accounts fully configured</li>
+        <li>Profiles optimized — banners, bios, links, pinned content</li>
+        <li>Launch content batch so no account sits empty</li>
+        <li><strong>Ready for FirebirdOS itself to take over</strong> — the moment your social module is live, it inherits a clean, optimized presence to run</li>
+      </ul>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 06</div>
+      <h4>Content Layer — Videos, Guides, Walkthroughs</h4>
+      <p>The product needs to be seen working. This is the demo material that does the selling before you ever get on a call.</p>
+      <ul>
+        <li><strong>Feature walkthrough videos</strong> — screen-recorded, professionally edited, voiced</li>
+        <li>Written guides and explainers for each core module</li>
+        <li>An overview video telling the Fragmentation Trap → Unified Intelligence story</li>
+        <li>All content feeds the website, social accounts, and your iNewsletter Module</li>
+      </ul>
+    </div>
+
+    <div class="pillar reveal">
+      <div class="pillar-num">Pillar 07</div>
+      <h4>Validation Program</h4>
+      <p>Proof before promises — and product feedback while you're still shaping the system.</p>
+      <ul>
+        <li><strong>Kinetic becomes your first validation partner</strong> — we run FirebirdOS on our own operations and document everything</li>
+        <li>We recruit up to 5 trial companies across different verticals</li>
+        <li>Structured feedback loops feed your product development now</li>
+        <li>Documented results become case studies — and their reviews flow straight into the reputation system from Pillar 4</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 5. TIMELINE ═══ -->
+<section id="timeline">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">05 · Timeline</div>
+      <h2 class="section-title">Week By <em>Week</em></h2>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-week">Week 1–2</div>
+        <h5>Kickoff & Brand</h5>
+        <p>Strategy call. Naming decision framework. Brand identity finalized. Templates produced. Social accounts created.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Week 3–4</div>
+        <h5>Website Build</h5>
+        <p>Site designed and built. Forms architecture implemented per your BOS input documentation. Endpoint planned for the Options tool. Analytics live.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Day 30</div>
+        <h5>Website Live</h5>
+        <p>Site deployed. iNewsletter integration connected. Online presence profiles published. Social accounts optimized and seeded.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Week 5–8</div>
+        <h5>AI Advisor + Content Production</h5>
+        <p>Advisor trained on FirebirdOS knowledge and deployed on the site. Walkthrough videos recorded and edited. Guides written. Validation partners recruited.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Week 9–12</div>
+        <h5>Validation & Polish</h5>
+        <p>Trial companies onboarded. Kinetic case study documented. Content published across all channels. Full handover review with you.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-week">Launch Day — Whenever You Say</div>
+        <h5>Everything Already Exists</h5>
+        <p>Brand. Website. Advisor. Social. Content. Proof. The day the product is ready, marketing is a switch you flip — not a project you wait on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 6. INVESTMENT ═══ -->
+<section id="investment">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">06 · Investment</div>
+      <h2 class="section-title">One Solution, <em>One Number</em></h2>
+      <p class="section-lead">One complete solution, one number. Every pillar is designed to feed the others — that's why this isn't a menu.</p>
+    </div>
+
+    <div class="reveal">
+      <div class="callout">
+        <div class="section-body">
+          <p style="text-align:center;margin-bottom:8px"><span style="font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--text)">$12,000</span></p>
+          <p style="text-align:center;color:var(--text-muted);font-size:15px;margin-bottom:22px">One complete solution · All seven pillars · 10–12 weeks</p>
+          <ul class="deliv-list">
+            <li><strong>Brand & identity system</strong> with naming decision support</li>
+            <li><strong>Website</strong> with your BOS forms architecture + Options tool endpoint</li>
+            <li><strong>AI Advisor</strong> trained, embedded, and capturing leads 24/7</li>
+            <li><strong>Online presence</strong> — business profiles, reviews management, reputation foundation</li>
+            <li><strong>Social media</strong> — five platforms set up, optimized, and seeded</li>
+            <li><strong>Content layer</strong> — walkthrough videos, guides, overview video</li>
+            <li><strong>Validation program</strong> — Kinetic + up to 5 trial companies</li>
+          </ul>
+          <p style="margin-top:18px;margin-bottom:0;font-size:15px;color:var(--text-muted)"><em>This is one integrated build — each pillar feeds the others. The website hosts the Advisor. The content fills the social accounts. The validation program generates the reviews. It works as a whole.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1.2px;color:var(--text);margin:36px 0 14px">Two Ways To Pay</h3>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <div class="tag">CASH-FLOW FRIENDLY</div>
+        <h4>Monthly</h4>
+        <div class="amt">$4,000</div>
+        <div class="per">per month × 3 months = $12,000</div>
+        <ul>
+          <li>Payment maps to delivery milestones</li>
+          <li><strong>Month 1:</strong> Brand + website live</li>
+          <li><strong>Month 2:</strong> Advisor + social + content</li>
+          <li><strong>Month 3:</strong> Validation + polish + handover</li>
+          <li>Stop anytime at a milestone boundary</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <div class="tag">BEST VALUE</div>
+        <h4>Upfront</h4>
+        <div class="amt">$9,000</div>
+        <div class="per">one payment · saves $3,000 (25% off)</div>
+        <ul>
+          <li>Everything in the Foundation Phase</li>
+          <li><strong>Same scope, same timeline</strong></li>
+          <li>Single invoice, no monthly admin</li>
+          <li>Our way of rewarding commitment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="section-body">
+        <p style="margin-bottom:0"><strong>What's not in this proposal:</strong> no marketing retainer, no ad spend, no ongoing fees. This is the launchpad only. When the product is ready and you want to go to market, that's a separate conversation — and you'll be negotiating it from a position where the foundation already exists.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 7. WHEN YOU'RE READY ═══ -->
+<section id="phase2">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">07 · Later, When You're Ready</div>
+      <h2 class="section-title">What Comes <em>After</em></h2>
+    </div>
+    <div class="section-body reveal">
+      <p>When the system is mature and you say go, Phase 2 is the growth engine: outbound to channel partners, paid campaigns, content marketing at scale, and pipeline management. We've already mapped that plan — including the four partner channels and the Verizon-type telecom conversations you're naturally starting to have.</p>
+      <p><strong>But that's a conversation for when you're ready.</strong> Nothing in this proposal commits you to it. The Foundation stands on its own — and it makes every future option cheaper and faster.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-spacer"></div>
+
+<!-- ═══ 8. CLOSE ═══ -->
+<section id="close">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">08 · Let's Build</div>
+      <h2 class="section-title">Ready When <em>You Are</em></h2>
+    </div>
+
+    <div class="letter reveal">
+      <p>Tom — you're building something that deserves to be seen properly when it launches. The Foundation makes sure it will be.</p>
+      <p>We'll walk through all of this on Thursday. Bring every question. And if it makes sense, we can start the same week.</p>
+      <p class="cta-sig">— Sam<br><span class="muted">Senior Strategist · Kinetic Digital Publishers</span></p>
+    </div>
+
+    <form id="proposal-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="06dff973-3e12-4438-8f38-341d1e0faa5c">
+      <input type="hidden" name="subject" value="New FirebirdOS Foundation Proposal Response">
+      <input type="hidden" name="from_name" value="FirebirdOS Proposal">
+      <div class="form-row">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Tom Batchelor" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tom@firebirdtradingsystems.com" required>
+      </div>
+      <div class="form-row">
+        <label for="payment">Preferred Next Step</label>
+        <select id="payment" name="payment">
+          <option value="monthly" selected>$4,000 for 3 months, next steps on Thursday</option>
+          <option value="upfront">$9,000 all upfront, next steps on Thursday</option>
+          <option value="discuss">Let's discuss on Thursday</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Questions or Notes</label>
+        <textarea id="message" name="message" placeholder="Anything you'd like to cover on our call..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Submit → Let's Build The Launchpad</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p><strong>Confidential</strong> · Prepared for Tom Batchelor / FirebirdOS</p>
+    <p>© 2026 Kinetic Digital Publishers · All rights reserved</p>
+  </div>
+</footer>
+
+<!-- ═══ JS ENGINE ═══ -->
+<script>
+(function() {
+  'use strict';
+  const STORAGE_KEY = 'firebird_foundation_v1';
+  const state = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || '{}');
+
+  // const WEBHOOK = 'https://hook.us2.make.com/YOUR_WEBHOOK_ID';
+  // function track(ev,p){try{fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event:ev,payload:p,t:new Date().toISOString(),session:STORAGE_KEY})})}catch(e){}}
+  function track(ev,p){console.log('[track]',ev,p)}
+
+  const audio=document.getElementById('narrationAudio');
+  const player=document.getElementById('audio-player');
+  const playIcon=document.getElementById('playIcon');
+  const pauseIcon=document.getElementById('pauseIcon');
+  const progressFill=document.getElementById('apProgressFill');
+  const currentTimeEl=document.getElementById('apCurrentTime');
+  const durationEl=document.getElementById('apDuration');
+
+  const chapters=[
+    {time:0,name:'01 · The Plan In A Nutshell'},
+    {time:50,name:'02 · The Intelligent Business OS'},
+    {time:130,name:'03 · The Window Is Open'},
+    {time:185,name:'04 · Pillar 1 — Brand'},
+    {time:225,name:'05 · Pillar 2 — Website'},
+    {time:280,name:'06 · Pillar 3 — AI Advisor'},
+    {time:330,name:'07 · Pillar 4 — Online Presence'},
+    {time:360,name:'08 · Pillar 5 — Social Media'},
+    {time:400,name:'09 · Pillar 6 — Content Layer'},
+    {time:445,name:'10 · Pillar 7 — Validation'},
+    {time:490,name:'11 · Timeline'},
+    {time:540,name:'12 · Investment'},
+    {time:610,name:'13 · When You Are Ready'},
+    {time:645,name:'14 · The Close'}
+  ];
+
+  function fmt(s){if(isNaN(s)||s<0)return'0:00';const m=Math.floor(s/60),c=Math.floor(s%60);return m+':'+(c<10?'0':'')+c}
+  function cur(t){let c=chapters[0];for(const ch of chapters)if(t>=ch.time)c=ch;return c}
+
+  // Map each rail section to its audio start time (matches the 8-chapter narration)
+  const sectionAudioTime={intro:0,what:55,'why-now':125,foundation:175,timeline:330,investment:380,phase2:450,close:485};
+
+  window.startProposal=function(){
+    document.getElementById('guideBackdrop').classList.remove('show');
+    document.getElementById('guidePopup').classList.remove('show');
+    if(player)player.classList.add('visible');
+    state.welcomed=true;sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+    track('opened',{});if(audio)audio.play().catch(()=>{});
+    var sn=document.getElementById('sidenav');if(sn)sn.classList.add('visible');document.body.classList.add('nav-open');
+  };
+  window.resumeProposal=function(){
+    document.getElementById('guideBackdrop').classList.remove('show');
+    document.getElementById('guidePopup').classList.remove('show');
+    if(player)player.classList.add('visible');
+    if(audio&&state.audioTime){audio.currentTime=state.audioTime;audio.play().catch(()=>{})}
+    var sn=document.getElementById('sidenav');if(sn)sn.classList.add('visible');document.body.classList.add('nav-open');
+  };
+  window.skipIntro=function(){
+    document.getElementById('guideBackdrop').classList.remove('show');
+    document.getElementById('guidePopup').classList.remove('show');
+    state.welcomed=true;sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+    track('opened_no_audio',{});
+  };
+  window.togglePlay=function(){if(!audio)return;if(audio.paused){audio.play();if(player)player.classList.add('visible')}else audio.pause()};
+  window.toggleMinimize=function(){if(player)player.classList.toggle('minimized')};
+  window.seekAudio=function(e){
+    const bar=document.getElementById('apProgressBar');
+    if(!audio||!bar)return;
+    const r=bar.getBoundingClientRect(),p=(e.clientX-r.left)/r.width;
+    if(audio.duration)audio.currentTime=p*audio.duration;
+  };
+
+  if(audio){
+    audio.addEventListener('play',()=>{if(playIcon)playIcon.style.display='none';if(pauseIcon)pauseIcon.style.display='block'});
+    audio.addEventListener('pause',()=>{if(playIcon)playIcon.style.display='block';if(pauseIcon)pauseIcon.style.display='none';state.audioTime=audio.currentTime;sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state))});
+    audio.addEventListener('timeupdate',()=>{
+      if(audio.duration&&progressFill)progressFill.style.width=((audio.currentTime/audio.duration)*100)+'%';
+      if(currentTimeEl)currentTimeEl.textContent=fmt(audio.currentTime);
+      if(durationEl)durationEl.textContent=fmt(audio.duration||0);
+    });
+    audio.addEventListener('ended',()=>track('audio_complete',{}));
+  }
+
+  const bd=document.getElementById('guideBackdrop'),pp=document.getElementById('guidePopup'),br=document.getElementById('btnResume');
+  function showWelcome(){
+    if(bd&&pp){
+      if(state.welcomed&&state.audioTime>10){bd.classList.add('show');pp.classList.add('show');if(br)br.style.display='block'}
+      else{bd.classList.add('show');pp.classList.add('show')}
+    }
+  }
+
+  // ═══ Access Gate ═══
+  const gate=document.getElementById('gate');
+  const gateForm=document.getElementById('gateForm');
+  if(state.gatePassed&&gate){
+    // Returning visitor — skip gate
+    gate.classList.add('hidden');
+    setTimeout(()=>{if(gate)gate.style.display='none';},500);
+    showWelcome();
+  } else if(gateForm){
+    gateForm.addEventListener('submit',function(e){
+      e.preventDefault();
+      const payload={
+        access_key:'06dff973-3e12-4438-8f38-341d1e0faa5c',
+        subject:'FirebirdOS Proposal Opened — '+document.getElementById('g_name').value,
+        from_name:'FirebirdOS Proposal',
+        name:document.getElementById('g_name').value,
+        email:document.getElementById('g_email').value,
+        phone:document.getElementById('g_phone').value,
+        form:'access_gate'
+      };
+      try{fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)}).catch(function(){});}catch(err){}
+      track('gate_passed',{name:payload.name});
+      state.gatePassed=true;state.gateName=payload.name;sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+      if(gate){gate.classList.add('hidden');setTimeout(()=>{if(gate)gate.style.display='none';},500);}
+      showWelcome();
+    });
+  } else {
+    showWelcome();
+  }
+
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target)}}),{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+
+  // ═══ Side Navigation ═══
+  window.toggleSidenav=function(){
+    var sn=document.getElementById('sidenav');
+    if(sn){
+      sn.classList.toggle('visible');
+      if(window.innerWidth>1100)document.body.classList.toggle('nav-open',sn.classList.contains('visible'));
+    }
+  };
+  const snLinks=document.querySelectorAll('.sidenav-link');
+  snLinks.forEach(link=>{
+    link.addEventListener('click',()=>{
+      const target=document.getElementById(link.dataset.target);
+      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+      // Seek narration to this section if audio is loaded and playing
+      const t=sectionAudioTime[link.dataset.target];
+      if(audio&&typeof t==='number'&&!audio.paused){audio.currentTime=t;}
+      if(window.innerWidth<=768){var sn=document.getElementById('sidenav');if(sn)sn.classList.remove('visible')}
+    });
+  });
+  // Scroll-spy
+  const spySections=Array.from(snLinks).map(l=>document.getElementById(l.dataset.target)).filter(Boolean);
+  const spyObs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        snLinks.forEach(l=>l.classList.toggle('active',l.dataset.target===e.target.id));
+        spySections.forEach(s=>s.classList.toggle('section-active',s.id===e.target.id));
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px',threshold:0});
+  spySections.forEach(s=>spyObs.observe(s));
+
+  // ═══ FirebirdOS AI Advisor (SMB-focused niches) ═══
+  const advisorBody=document.getElementById('advisorBody');
+  const advisorSuggestions=document.getElementById('advisorSuggestions');
+
+  const greetings={
+    smb:'👋 Welcome — I\'m the FirebirdOS Advisor. I see you run a <strong>small business</strong>. Most owners come to us juggling 10+ disconnected tools and drowning in admin work. What eats most of your week — marketing, operations, or keeping track of customers?',
+    startup:'👋 Hey — I\'m the FirebirdOS Advisor. <strong>Startup founder</strong>, great. You\'re probably doing the work of five people right now. FirebirdOS is built to be the operations team you can\'t afford to hire yet. What\'s breaking first — marketing consistency, customer tracking, or just hours in the day?',
+    partner:'👋 Hello — I\'m the FirebirdOS Advisor. Good to meet a <strong>potential partner</strong>. Agencies, consultants, and service providers use FirebirdOS to deliver AI operations to their clients under their own brand. Are you exploring this for client delivery, or for your own operations first?',
+    investor:'👋 Welcome — I\'m the FirebirdOS Advisor. For <strong>investors</strong>, the short version: FirebirdOS is an Intelligent Business Operating System — a unified AI layer that runs business operations autonomously, built on a canonical business record. Want the market thesis, the product architecture, or the traction story?'
+  };
+
+  const suggestions={
+    smb:[{text:'What does FirebirdOS actually do?',q:'What does FirebirdOS actually do?'},{text:'Can it run my social media?',q:'Can it run my social media?'},{text:'What does it cost?',q:'What does it cost?'}],
+    startup:[{text:'How is this different from Zapier + ChatGPT?',q:'How is this different from other tools?'},{text:'Can it predict which customers will churn?',q:'Can it predict churn?'},{text:'How fast can I get set up?',q:'How fast is setup?'}],
+    partner:[{text:'Can I offer this to my clients?',q:'Can I offer FirebirdOS to my clients?'},{text:'Is there a partner program?',q:'Is there a partner program?'},{text:'What support do partners get?',q:'What support do partners get?'}],
+    investor:[{text:'What\'s the market thesis?',q:'What is the market thesis?'},{text:'What\'s the moat?',q:'What is the moat?'},{text:'How does it make money?',q:'How does FirebirdOS make money?'}]
+  };
+
+  const responses={
+    smb:[
+      {kw:['do','what','actually','explain'],r:'FirebirdOS connects to the tools you already use — your CRM, email, social accounts, bookkeeping — and uses AI to <strong>actually run things</strong>: posting content, following up with customers, flagging problems before they cost you money. Think of it as an operations manager that never sleeps. <strong>What tools are you using today?</strong>'},
+      {kw:['social','media','post','content'],r:'Yes — autonomous social media is one of FirebirdOS\'s flagship capabilities. It plans the strategy, creates the content, publishes across LinkedIn, Facebook, Instagram, X, and YouTube, then <strong>measures what actually drives revenue</strong> and shifts effort to what works. You approve, it executes. <strong>Which platforms matter most for your business?</strong>'},
+      {kw:['cost','price','much','expensive'],r:'Pricing scales with the modules you use — you start with the core and add capabilities as you grow. Most small businesses start well below the cost of a single part-time hire. <strong>The best next step is a short walkthrough call. Want me to set one up?</strong>'},
+      {kw:['time','week','admin','drowning','busy'],r:'That\'s exactly the problem FirebirdOS exists for. The system takes over the repetitive layer — follow-ups, posting, reporting, data entry — so your week goes back to actual business. Most owners reclaim <strong>10–15 hours a week</strong>. <strong>What would you do with that time back?</strong>'}
+    ],
+    startup:[
+      {kw:['different','zapier','chatgpt','tools','vs'],r:'Zapier moves data between tools but doesn\'t think. ChatGPT thinks but isn\'t connected to your business. FirebirdOS is both: a <strong>canonical record of your whole business</strong> plus AI that acts on it autonomously. It\'s the difference between owning a toolbox and having a team. <strong>What\'s your current stack?</strong>'},
+      {kw:['churn','predict','leave','forecast'],r:'Yes — Strategic Intelligence is a core layer. It runs churn prediction, revenue forecasting, and customer segmentation off your real data. It answers questions like <strong>"which customers are most likely to leave?"</strong> and <strong>"which channel brings the most profitable clients?"</strong> — like having a data science team without hiring one. <strong>What would you want it to predict first?</strong>'},
+      {kw:['fast','setup','start','quickly','long'],r:'Setup is days, not months. FirebirdOS connects to your existing tools — no rip-and-replace. The core system is live first, then modules activate as you need them. <strong>Want a walkthrough of the onboarding flow?</strong>'}
+    ],
+    partner:[
+      {kw:['client','offer','resell','deliver'],r:'Yes — that\'s a core model. Partners deploy FirebirdOS for their clients, often under their own brand, and turn one-time projects into <strong>recurring AI operations revenue</strong>. Your clients get an operations brain; you get monthly income per deployment. <strong>What kind of clients do you serve?</strong>'},
+      {kw:['program','partner','commission','margin'],r:'The partner program is being formalized now — early partners get founding terms, direct access to Tom, and input into the roadmap. <strong>Want me to flag you for a partner conversation?</strong>'},
+      {kw:['support','help','training','onboard'],r:'Partners get white-glove onboarding, deployment playbooks, and a direct line for technical questions. You\'re never deploying alone. <strong>Would a joint first deployment with one of your clients make sense?</strong>'}
+    ],
+    investor:[
+      {kw:['market','thesis','size','opportunity'],r:'The thesis: every business will run on an intelligent operations layer within a decade. Gartner says 33% of enterprise apps will include agentic AI by 2028. Incumbents bolt AI onto old architectures — <strong>FirebirdOS was built AI-native around a canonical business record</strong>. The category is forming now, and category formation is when positions are won. <strong>Want the competitive map?</strong>'},
+      {kw:['moat','defensible','competitive','edge'],r:'Three layers: the <strong>canonical business record</strong> compounds in value with every interaction — switching costs grow daily. The autonomous execution layer is architecture, not a feature add. And the modular ecosystem creates expansion revenue inside every account. <strong>Want the architecture breakdown?</strong>'},
+      {kw:['money','revenue','monetize','business model'],r:'Subscription core plus modular expansion — businesses start with the core OS and add modules (Media, Connect, Publish, Strategy, Talent) as they grow. Partner channel multiplies distribution without a direct sales force. <strong>Happy to connect you with Tom for the full model.</strong>'}
+    ]
+  };
+
+  let curNiche='smb';
+  const fallback='Great question — the best answer comes straight from Tom. <strong>Share your email and I\'ll set up a conversation.</strong>';
+
+  function addMsg(role,html){
+    if(!advisorBody)return;
+    const d=document.createElement('div');d.className='advisor-msg '+role;
+    d.innerHTML='<div class="advisor-msg-bubble">'+html+'</div>';
+    advisorBody.appendChild(d);advisorBody.scrollTop=advisorBody.scrollHeight;
+  }
+  window.switchNiche=function(n){
+    curNiche=n;
+    document.querySelectorAll('.advisor-niche-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelector('[data-niche="'+n+'"]').classList.add('active');
+    if(advisorBody)advisorBody.innerHTML='<div class="advisor-msg bot"><div class="advisor-msg-bubble">'+greetings[n]+'</div></div>';
+    if(advisorSuggestions)advisorSuggestions.innerHTML=suggestions[n].map(s=>'<div class="advisor-suggestion" onclick="askAdvisor(\''+s.q.replace(/'/g,"\\'")+'\')">'+s.text+'</div>').join('');
+  };
+  window.askAdvisor=function(t){const i=document.getElementById('advisorInput');if(i)i.value=t;sendAdvisorMsg()};
+  window.sendAdvisorMsg=function(){
+    const inp=document.getElementById('advisorInput');if(!inp)return;
+    const text=inp.value.trim();if(!text)return;
+    addMsg('user',text);inp.value='';track('advisor_msg',{text,niche:curNiche});
+    const low=text.toLowerCase();let m=null;
+    for(const pool of [responses[curNiche]||[],responses.smb]){
+      for(const r of pool){for(const k of r.kw)if(low.includes(k)){m=r;break}if(m)break}
+      if(m)break;
+    }
+    const typ=document.createElement('div');typ.className='advisor-msg bot';typ.id='typ';
+    typ.innerHTML='<div class="advisor-typing"><span></span><span></span><span></span></div>';
+    advisorBody.appendChild(typ);advisorBody.scrollTop=advisorBody.scrollHeight;
+    setTimeout(()=>{const t=document.getElementById('typ');if(t)t.remove();addMsg('bot',m?m.r:fallback)},800+Math.random()*400);
+  };
+
+  const form=document.getElementById('proposal-form');
+  if(form)form.addEventListener('submit',function(e){
+    e.preventDefault();
+    track('form_submitted',{payment:document.getElementById('payment')?.value});
+    const btn=form.querySelector('.form-submit');
+    const origText=btn?btn.textContent:'';
+    if(btn){btn.textContent='Sending...';btn.disabled=true;}
+    const data=Object.fromEntries(new FormData(form).entries());
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(data)
+    }).then(r=>r.json()).then(()=>{
+      form.innerHTML='<div style="text-align:center;padding:20px 0"><div style="font-family:\'Bebas Neue\',sans-serif;font-size:32px;color:var(--accent);letter-spacing:1px;margin-bottom:10px">Got It, Tom.</div><p style="color:var(--text-dim);font-size:16px;margin:0">Your response is on its way to us. We will pick this up on Thursday. Talk soon.</p></div>';
+    }).catch(()=>{
+      if(btn){btn.textContent=origText;btn.disabled=false;}
+      alert('Something went wrong sending the form. Please email teamkineticemail@gmail.com directly.');
+    });
+  });
+
+  const depths=[25,50,75,100],reached=new Set(state.depthReached||[]);
+  const progressBarEl=document.getElementById('scroll-progress');
+  window.addEventListener('scroll',()=>{
+    const scrolled=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight);
+    const p=Math.round(scrolled*100);
+    if(progressBarEl)progressBarEl.style.width=(scrolled*100)+'%';
+    depths.forEach(m=>{if(p>=m&&!reached.has(m)){reached.add(m);state.depthReached=Array.from(reached);sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state));track('depth',{m})}});
+  },{passive:true});
+  document.addEventListener('visibilitychange',()=>track(document.hidden?'blur':'focus',{}));
+  window.addEventListener('beforeunload',()=>track('close',{maxDepth:Math.max(...(state.depthReached||[0])),audioTime:audio?audio.currentTime:0}));
+})();
+</script>
+</body>
+</html>
